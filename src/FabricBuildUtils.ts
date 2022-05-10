@@ -92,8 +92,8 @@ export class FabricBuildUtils {
     const loader = fabricLocalDB.findLoaderByVersion(loaderVersion);
     const serverInstallerUrl = getFabricServerInstallerUrl(
       gameVersionId,
-      installer.version,
-      loader.version
+      loader.version,
+      installer.version
     );
 
     return {
