@@ -22,19 +22,17 @@ type FabricCore = {
 
 type FabricServerCore = { type: "fabric" } & FabricCore;
 
-type Server<T = FabricServerCore> = {
+type FabricServerData = {
   id: string;
   name: string;
   status: string;
-  core: T;
-  mods: ServerMod[];
+  core: FabricServerCore;
+  mods: string[];
   gameVersion: string;
   gameVersionTypeId: number;
   eula: boolean;
   startTimes: [];
 };
-
-type ServerMod = string;
 
 type FabricLocalDBData = {
   installers: FabricInstaller[];

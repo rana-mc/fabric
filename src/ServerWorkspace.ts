@@ -15,10 +15,10 @@ type Executable = {
 export default class ServerWorkspace {
   public static TAG = 'ServerWorkspace';
 
-  private server: Server<FabricServerCore>;
+  private server: FabricServerData;
 
-  constructor(server: Server) {
-    this.server = server as Server<FabricServerCore>;
+  constructor(server: FabricServerData) {
+    this.server = server as FabricServerData;
   }
 
   /**

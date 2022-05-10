@@ -25,13 +25,13 @@ export class FabricServer extends EventEmitter {
 
   private logger: Logger = new Logger(FabricServer.TAG);
 
-  private server: Server;
+  private server: FabricServerData;
 
   private process: ChildProcess;
 
   private workspace: ServerWorkspace;
 
-  constructor(server: Server) {
+  constructor(server: FabricServerData) {
     super();
 
     this.server = server;
@@ -138,7 +138,7 @@ export class FabricServer extends EventEmitter {
   /**
    * Update server data.
    */
-  public update(server: Server): FabricServer {
+  public update(server: FabricServerData): FabricServer {
     this.server = server;
     return this;
   }
